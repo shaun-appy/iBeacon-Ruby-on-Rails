@@ -3,6 +3,8 @@
     .fl
       = content_tag(:a, module_title_tag(t("appy.backend.ibeacon.title"), style: "display: :inline;"))
       .pth.s.cta= page_entries_info(ibeacons).html_safe
+    .YHFieldWrapper.fr
+      = render partial: "shared/search", locals: { search: app_ibeacons_path }
     .clear
   = module_tag :content do
     = content_tag :div, paginate(ibeacons), class: "YHPagination YHTablePagination YHAboveTablePagination"

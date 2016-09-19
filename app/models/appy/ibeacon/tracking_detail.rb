@@ -17,5 +17,6 @@ module Appy::Ibeacon
       self.active_time = active_time
       self.save
     end
+
   end
 end

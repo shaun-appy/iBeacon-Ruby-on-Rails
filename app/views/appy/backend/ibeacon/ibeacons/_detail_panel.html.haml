@@ -1,13 +1,13 @@
 = module_tag :root do
   = module_tag :header, class: "p" do
-    = link_to t("appy.backend.shared.back"), app_ibeacons_path(app), class: "APButton APGreenButton"
+    .fr
+      = link_to t("appy.backend.shared.back"), app_ibeacons_path(app), class: "APButton APGreenButton"
+    .fl
+      = content_tag(:a, module_title_tag(t("appy.backend.ibeacon.table.details.title"), style: "diaplay: :inline;"))
+      .pth.s.cta= page_entries_info(trackingDetails).html_safe
+    .clear
   = module_tag :content do
+    = content_tag :div, paginate(trackingDetails), class: "YHPagination YHTablePagination YHAboveTablePagination"
     = render partial: "detail_table"
-    -# .fl
-    -#   = content_tag(:a, module_title_tag(t("appy.backend.ibeacon.table.details.title"), style: "display: :inline;"))
-    -#   .pth.s.cta= page_entries_info(trackingDetails).html_safe
-    -# .clear
-  -# = module_tag :content do
-    -# # = content_tag :div, paginate(trackingDetails), class: "YHPagination YHTablePagination YHAboveTablePagination"
-  -# = render partial: "detail_table"
-  -# = module_tag :footer, class: "ph" do end
+    = content_tag :div, paginate(trackingDetails), class: "YHPagination YHTablePagination YHAboveTablePagination"
+  = module_tag :footer, class: "ph" do end

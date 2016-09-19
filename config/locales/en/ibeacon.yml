@@ -13,7 +13,8 @@ en:
           last_active: "Last Active"
           actions: "Actions"
           details:
+            title: "iBeacon logs"
             index: "ID"
-            title: "test test test"
             active_time: "Active Time"
+            user_id: "User ID"
             user: "User"

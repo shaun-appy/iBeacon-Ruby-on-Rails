@@ -1,0 +1,26 @@
+= page_title_tag t('appy.backend.ibeacon.new')
+= module_tag :root do
+  = module_tag :content, class: "pd" do
+    = form_for ibeacon, url: app_ibeacons_path(app) do |f|
+      - if ibeacon.errors.any?
+        %div{:id => "error_explanation"}
+          %ul
+            - ibeacon.errors.full_messages.each do |msg|
+              %li= msg
+      %p
+        = f.label :id, "ID", class: "YHLabel"
+        %br
+        = f.text_field :id, class: "YHField"
+      %p
+        = f.label :name, class: "YHLabel"
+        %br
+        = f.text_field :name, class: "YHField"
+      %p
+        = f.label :message, class: "YHLabel"
+        %br
+        = f.text_area :message, cols: 60, rows: 4
+      .py
+        = f.submit class: "APButton"
+        = t("appy.backend.shared.or")
+        = link_to t("appy.backend.shared.cancel"), app_ibeacons_path(app)
+  = module_tag :footer, class: "ph" do end

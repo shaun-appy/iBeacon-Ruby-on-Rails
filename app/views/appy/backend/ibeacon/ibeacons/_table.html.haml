@@ -1,0 +1,10 @@
+%table.YHTable.s
+  %thead
+    %th{:style => "width:5%;text-align:center"}= sortable Appy::Ibeacon::Tracking, :id, t("appy.backend.ibeacon.table.id")
+    %th{:style => "text-align:center"}= sortable Appy::Ibeacon::Tracking, :name, t("appy.backend.ibeacon.table.name")
+    %th{:style => "text-align:center"}= sortable Appy::Ibeacon::Tracking, :message, t("appy.backend.ibeacon.table.message")
+    %th{:style => "text-align:center"}= sortable Appy::Ibeacon::Tracking, :last_active, t("appy.backend.ibeacon.table.last_active")
+    %th{:style => "text-align:center"}= t("appy.backend.ibeacon.table.actions")
+  %tbody
+    - ibeacons.each do |b|
+      = render partial: "row", locals: { obj: b }

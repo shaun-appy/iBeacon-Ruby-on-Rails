@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  active_time: 2016-09-16 14:32:30
+  tracking_id: 
+  user_id: 
+
+two:
+  active_time: 2016-09-16 14:32:30
+  tracking_id: 
+  user_id: 

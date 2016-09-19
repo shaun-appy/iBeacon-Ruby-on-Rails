@@ -1,0 +1,19 @@
+en:
+  appy:
+    backend:
+      ibeacon:
+        title: "iBeacon Tracking"
+        new: "New iBeacon"
+        edit: "Edit iBeacon"
+        show: "iBeacon \"%{ibeacon_id}\""
+        table:
+          id: "ID"
+          name: "iBeacon Name"
+          message: "Message"
+          last_active: "Last Active"
+          actions: "Actions"
+          details:
+            index: "ID"
+            title: "test test test"
+            active_time: "Active Time"
+            user: "User"

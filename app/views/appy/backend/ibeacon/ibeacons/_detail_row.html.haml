@@ -1,0 +1,7 @@
+%tr{:class => "YHTable #{stripe("table.row")}"}
+  %td{:style => "text-align:center"}= obj.id
+  %td{:style => "text-align:center"}= Appy::User.find(obj.user_id).name
+  %td{:style => "text-align:center"}
+    = l obj.active_time, format: :long
+  %td{:style => "text-align:center"}
+    = link_to 'Delete', app_ibeacon_detail_path(app, ibeacon, obj), method: 'delete', class: "YHRightButton YHButton ph"

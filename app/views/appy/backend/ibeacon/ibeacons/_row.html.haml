@@ -1,0 +1,13 @@
+%tr{:class => "YHTable #{stripe("table.row")}"}
+  %td{:style => "text-align:center"}= obj.id
+  %td{:style => "text-align:center"}= obj.name
+  %td{:style => "text-align:center"}= obj.message
+  - if obj.last_active
+    %td{:style => "text-align:center"}
+      = l obj.last_active, format: :long
+  - else
+    %td{:style => "text-align:center"} not yet activated
+  %td{:style => "text-align:center"}
+    = link_to 'Show', app_ibeacon_path(app,obj), class: "YHRightButton YHButton ph"
+    = link_to 'Edit', edit_app_ibeacon_path(app,obj), class: "YHRightButton YHButton ph"
+    = link_to 'Delete', app_ibeacon_path(app,obj), method: 'delete', class: "YHRightButton YHButton ph"

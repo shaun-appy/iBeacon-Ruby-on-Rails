@@ -1,0 +1,4 @@
+.fr
+  = link_to t("appy.backend.ibeacon.new"), new_app_ibeacon_path(app), class: "APButton APGreenButton"
+= page_title_tag t("appy.backend.ibeacon.title")
+= render partial: "panel", locals: {ibeacons: ibeacons}

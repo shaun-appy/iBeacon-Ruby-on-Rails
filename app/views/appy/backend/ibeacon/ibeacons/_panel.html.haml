@@ -1,0 +1,11 @@
+= module_tag :root do
+  = module_tag :header, class: "p" do
+    .fl
+      = content_tag(:a, module_title_tag(t("appy.backend.ibeacon.title"), style: "display: :inline;"))
+      .pth.s.cta= page_entries_info(ibeacons).html_safe
+    .clear
+  = module_tag :content do
+    = content_tag :div, paginate(ibeacons), class: "YHPagination YHTablePagination YHAboveTablePagination"
+    = render partial: "table"
+    = content_tag :div, paginate(ibeacons), class: "YHPagination YHTablePagination YHBelowTablePagination"
+  = module_tag :footer, class: "ph" do end

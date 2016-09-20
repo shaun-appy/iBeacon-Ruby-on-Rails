@@ -10,4 +10,4 @@
   %td{:style => "text-align:center"}
     = link_to 'Show', app_ibeacon_path(app,obj), class: "YHRightButton YHButton ph"
     = link_to 'Edit', edit_app_ibeacon_path(app,obj), class: "YHRightButton YHButton ph"
-    = link_to 'Delete', app_ibeacon_path(app,obj), method: 'delete', class: "YHRightButton YHButton ph"
+    = link_to t("appy.backend.shared.destroy.link"), app_ibeacon_path(app,obj), method: 'delete', class: "YHRightButton YHButton ph", data: { confirm: t("appy.backend.shared.confirm_destroy") }

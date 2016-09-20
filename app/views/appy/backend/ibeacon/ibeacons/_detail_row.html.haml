@@ -3,5 +3,6 @@
   %td{:style => "text-align:center"}= obj.user_id
   %td{:style => "text-align:center"}
     = l obj.active_time, format: :long
+  %td{:style => "text-align:center"}= obj.distance
   %td{:style => "text-align:center"}
     = link_to t("appy.backend.shared.destroy.link"), app_ibeacon_detail_path(app, ibeacon, obj), method: 'delete', class: "YHRightButton YHButton ph", data: { confirm: t("appy.backend.shared.confirm_destroy")}

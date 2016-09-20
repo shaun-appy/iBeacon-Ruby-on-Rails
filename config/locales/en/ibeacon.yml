@@ -6,6 +6,8 @@ en:
         new: "New iBeacon"
         edit: "Edit iBeacon"
         show: "iBeacon \"%{ibeacon_id}\""
+        show_link: "Show"
+        edit_link: "Edit"
         table:
           id: "ID"
           name: "iBeacon Name"
@@ -18,3 +20,4 @@ en:
             active_time: "Active Time"
             user_id: "User ID"
             user: "User"
+            distance: "Distance (m)"

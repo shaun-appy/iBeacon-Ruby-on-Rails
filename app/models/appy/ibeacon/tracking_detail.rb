@@ -1,9 +1,8 @@
 module Appy::Ibeacon
   class TrackingDetail < ActiveRecord::Base
     include Appy::Concerns::Sortable
-
-    belongs_to :appy_users
-    belongs_to :appy_ibeacon_trackings
+    
+    belongs_to :tracking
 
     attr_accessible :tracking_id, :active_time, :user_id
 

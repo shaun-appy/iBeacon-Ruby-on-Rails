@@ -7,7 +7,7 @@
       .pth.s.cta= page_entries_info(trackingDetails).html_safe
     .clear
   = module_tag :content do
-    = content_tag :div, paginate(trackingDetails), class: "YHPagination YHTablePagination YHAboveTablePagination"
+    = content_tag :div, paginate(tracking_details), class: "YHPagination YHTablePagination YHAboveTablePagination"
     = render partial: "detail_table"
-    = content_tag :div, paginate(trackingDetails), class: "YHPagination YHTablePagination YHAboveTablePagination"
+    = content_tag :div, paginate(tracking_details), class: "YHPagination YHTablePagination YHAboveTablePagination"
   = module_tag :footer, class: "ph" do end

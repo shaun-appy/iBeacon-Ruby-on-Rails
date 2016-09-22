@@ -3,8 +3,8 @@ module Appy::Ibeacon
 
     include Appy::Concerns::Sortable
 
-    has_many :appy_ibeacon_tracking_details
-    has_many :appy_users
+    has_many :person
+    has_many :tracking_details
 
     attr_accessible :last_active, :id, :name, :message
 

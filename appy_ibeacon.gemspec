@@ -17,11 +17,6 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  # with default
-  # s.add_dependency "rails", "~> 4.0.2"
-  # s.add_dependency "deface"
-
-
   # in real app needs
   s.require_path = "lib"
   s.add_dependency "appy_core"

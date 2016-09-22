@@ -6,5 +6,5 @@
     %th{:style => "text-align:center"}= sortable Appy::Ibeacon::TrackingDetail, :distance, t("appy.backend.ibeacon.table.details.distance")
     %th{:style => "text-align:center"}= t("appy.backend.ibeacon.table.actions")
   %tbody
-    - trackingDetails.each do |trd|
+    - tracking_details.each do |trd|
       = render partial: "detail_row", locals: { obj: trd }

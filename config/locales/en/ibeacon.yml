@@ -21,3 +21,8 @@ en:
             user_id: "User ID"
             user: "User"
             distance: "Distance (m)"
+        notice:
+          deleted: "Deleted"
+          created: "Created"
+          updated: "iBeacon id %{ibeacon_id} was updated"
+          failed: "Something went wrong can't %{action}!"

@@ -3,7 +3,7 @@ Appy::Core::Engine.routes.draw do
     resources :apps do
       scope :module => 'ibeacon' do
         resources :ibeacons do
-          resources :details, only: :destroy, to: 'details#destroy'
+          resources :tracking_details, only: :destroy, to: 'tracking_details#destroy'
         end
       end
     end

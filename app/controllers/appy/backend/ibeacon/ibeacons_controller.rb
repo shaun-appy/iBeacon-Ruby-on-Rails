@@ -20,7 +20,7 @@ module Appy
 
         def update
           if ibeacon.save
-            flash.notice = t("appy.backend.ibeacon.notice.updated", ibeacon_id: ibeacon_id)
+            flash.notice = t("appy.backend.ibeacon.notice.updated", ibeacon_id: ibeacon.id)
             redirect_to edit_app_ibeacon_path(app, ibeacon)
           else
             flash.now.alert = t("appy.backend.ibeacon.notice.failed", action: "update")

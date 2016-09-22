@@ -5,7 +5,7 @@ module Appy
 
         expose(:app) { Appy::App.find(params[:app_id]) }
         expose(:ibeacon) { Appy::Ibeacon::Tracking.find(params[:ibeacon_id]) }
-        expose(:tracking_detail) { Appy::Ibeacon::TrackingDetails.find(params[:id]) }
+        expose(:tracking_detail) { Appy::Ibeacon::TrackingDetail.find(params[:id]) }
 
         def destroy
           if tracking_detail.destroy

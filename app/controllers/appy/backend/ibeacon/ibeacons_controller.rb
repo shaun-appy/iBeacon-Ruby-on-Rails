@@ -6,7 +6,7 @@ module Appy
         expose(:app) { Appy::App.find(params[:app_id]) }
         expose(:ibeacon, model: Appy::Ibeacon::Tracking)
         expose(:ibeacons) { Appy::Sorter.new(Appy::Ibeacon::Tracking, app, search_results_for(params[:q], Appy::Ibeacon::Tracking.all, Appy::Ibeacon::Tracking::SEARCH_FIELDS)).sort(params) }
-        expose(:tracking_details) { Appy::Sorter.new(Appy::Ibeacon::TrackingDetail.where(tracking_id: ibeacon), app, search_results_for(params[:q], Appy::Ibeacon::TrackingDetail.where(tracking_id: ibeacon), Appy::Ibeacon::TrackingDetail::SEARCH_FIELDS)).sort(params) }
+        expose(:tracking_details) { Appy::Sorter.new(Appy::Ibeacon::TrackingDetail.where(tracking_id: ibeacon.tracking_id), app, search_results_for(params[:q], Appy::Ibeacon::TrackingDetail.where(tracking_id: ibeacon.tracking_id), Appy::Ibeacon::TrackingDetail::SEARCH_FIELDS)).sort(params) }
 
         def create
           if ibeacon.save
@@ -39,7 +39,7 @@ module Appy
 
         private
           def ibeacon_params
-            params.require(:ibeacon).permit(:id, :name, :message)
+            params.require(:ibeacon).permit(:id, :tracking_id, :name, :message)
           end
       end
     end

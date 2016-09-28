@@ -3,13 +3,16 @@ en:
     backend:
       ibeacon:
         title: "iBeacon Tracking"
+        tracking_id: "Tracking ID"
         new: "New iBeacon"
         edit: "Edit iBeacon"
         show: "iBeacon \"%{ibeacon_id}\""
+        empty: "Nothing Here Yet!"
         show_link: "Show"
         edit_link: "Edit"
         table:
           id: "ID"
+          tracking_id: "Tracking ID"
           name: "iBeacon Name"
           message: "Message"
           last_active: "Last Active"

@@ -2,7 +2,8 @@ module Appy
   module Ibeacon
     class Engine < ::Rails::Engine
       isolate_namespace Appy::Ibeacon
-
+      engine_name :appy_ibeacon
+      
       # Autoloads files from lib folder
       config.autoload_paths += %W(#{config.root}/lib)
 
